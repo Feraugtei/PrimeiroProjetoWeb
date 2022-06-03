@@ -181,6 +181,10 @@ body.menu-expanded {
   overflow: hidden;
 }
 
+body.menu-expanded > :not(nav) {  /* Aplica a todos os filhos, menos o nav */
+  display: none;
+}
+
 .menu,
 .close-menu {
   opacity: 0;
@@ -252,7 +256,7 @@ body.menu-expanded nav {
 }
 
 body.menu-expanded .logo,
-body.menu-expanded button {
+body.menu-expanded nav button {
   position: relative;
   z-index: 100;
 }

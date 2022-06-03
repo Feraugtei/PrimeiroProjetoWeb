@@ -6,3 +6,5 @@ function onScroll() {
   }
 }
 
+console.log("Para retrair nav, apague a classe 'menu-expanded' do body")
+
