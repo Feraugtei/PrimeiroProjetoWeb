@@ -29,6 +29,8 @@ body {
   font-size: 1.6rem;  /* 16px */
 
   text-align: center;
+
+  overflow: overlay;
 }
 
 .wrapper{
@@ -187,7 +189,8 @@ body.menu-expanded {
   overflow: hidden;
 }
 
-body.menu-expanded > :not(nav) {  /* Aplica a todos os filhos, menos o nav */
+body.menu-expanded > :not(nav),  /* Aplica a todos os filhos, menos o nav */
+body.menu-expanded .open-menu {  
   display: none;
 }
 
