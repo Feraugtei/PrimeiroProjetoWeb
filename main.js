@@ -1,10 +1,8 @@
 function onScroll() {
+  var element = document.getElementById("navigation");
   if(scrollY > 0) {
-    navigation.classList.add('scroll')
+    element.classList.add('scroll')
   } else {
-    navigation.classList.remove('scroll')
+    element.classList.remove('scroll')
   }
 }
-
-console.log("Para retrair nav, apague a classe 'menu-expanded' do body")
-

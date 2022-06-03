@@ -171,8 +171,14 @@ nav.scroll svg:nth-child(1) path{  /* Aplica ao primeiro SVG encontrado no NAV *
   fill: white;
 }
 
-nav.scroll svg:nth-child(2) path{  /* Aplica ao segundo SVG encontrado no NAV */
+nav.scroll button path{  /* Aplica ao segundo SVG encontrado no NAV */
   stroke: white;
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /*================MENU EXPANDED=================*/
