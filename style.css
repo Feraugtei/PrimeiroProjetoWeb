@@ -19,6 +19,10 @@
   --nav-height: 7.2rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -50,10 +54,10 @@ section {
   padding-block: 10rem;
 }
 
-/*================HEADER=================*/
+/*================ #HOME =================*/
 
-header {
-  margin-top: calc(4.1rem + var(--nav-height));
+#home {
+  padding-top: calc(4.1rem + var(--nav-height));
 }
 
 header::before {
