@@ -27,4 +27,7 @@ ScrollReveal({
  #home .stats,
  #services,
  #services header,
- #services .card`);   /* acento agudo " `` " permite quebra de linha */
+ #services .card,
+ #about,
+ #about header,
+ #about .content`);   /* acento agudo " `` " permite quebra de linha */
