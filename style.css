@@ -140,7 +140,7 @@ section .content p{
   fill: var(--primary-color);
 }
 
-button.open-menu path[stroke*="#00856F"]
+button.open-menu path[stroke*="#00856F"],
 #contact li path {
   stroke: var(--primary-color);
 }
