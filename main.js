@@ -1,10 +1,29 @@
+window.addEventListener('scroll', onScroll) 
+/* 
+  Executa a função onScroll ao registrar scroll, aplica para toda a pagina. 
+  É uma alternativa a ter que declarar a execução da função no body ao registrar scroll.
+*/
+onScroll()
 function onScroll() {
+  showNavOnScroll()
+  showBackToTopButtonOnScroll()
+}
+
+function showNavOnScroll() {
   var element = document.getElementById("navigation");
   if(scrollY > 0) {
     element.classList.add('scroll')
   } else {
     element.classList.remove('scroll')
   }
+}
+
+function showBackToTopButtonOnScroll() {
+  if(scrollY > 500) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  } 
 }
 
 function openMenu() {
