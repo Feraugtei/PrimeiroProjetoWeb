@@ -1,12 +1,21 @@
 window.addEventListener('scroll', onScroll) 
+window.setInterval(hueIncrement , 45)
 /* 
   Executa a função onScroll ao registrar scroll, aplica para toda a pagina. 
   É uma alternativa a ter que declarar a execução da função no body ao registrar scroll.
 */
+var r = document.querySelector(':root')
+var hue = 170
+
 onScroll()
 function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()
+}
+
+function hueIncrement() {
+  hue ++
+  r.style.setProperty('--hue', hue)
 }
 
 function showNavOnScroll() {
