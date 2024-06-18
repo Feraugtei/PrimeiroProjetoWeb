@@ -11,6 +11,34 @@ onScroll()
 function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()
+  activateMenuAtCurrentSection(home)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(contact)
+}
+
+function activateMenuAtCurrentSection(section) {
+  const targetLine = scrollY + innerHeight / 2  /* Obtem o scrollY no meio da tela visivel atual */
+  
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
+
+  const sectionEndsAt = sectionTop + sectionHeight
+
+  const sectionEndPassedTargetLine = targetLine >= sectionEndsAt
+
+  const sectionBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
+
+  const sectionId = section.getAttribute('id')
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+
+  menuElement.classList.remove('active')
+  
+  if(sectionBoundaries) {
+    menuElement.classList.add('active')
+  }
 }
 
 function hueIncrement() {
@@ -19,7 +47,7 @@ function hueIncrement() {
 }
 
 function showNavOnScroll() {
-  var element = document.getElementById("navigation");
+  var element = document.getElementById("navigation")
   if(scrollY > 0) {
     element.classList.add('scroll')
   } else {
@@ -58,4 +86,4 @@ ScrollReveal({
  #services .card,
  #about,
  #about header,
- #about .content`);   /* acento agudo " `` " permite quebra de linha */
+ #about .content`); 
