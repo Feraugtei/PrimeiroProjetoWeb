@@ -130,6 +130,10 @@ section .content p{
   gap: 3.2rem;
 }
 
+.bilanguage::before {
+  content: attr(data-en);
+}
+
 /* Custom Colors */
 
 #services .card circle {
@@ -459,6 +463,36 @@ footer .social-links {
   justify-content: flex-start;
 }
 
+footer .col-c .language-options {
+  display: flex;
+  flex-direction: row;
+
+  margin-block: 3rem;
+
+  justify-content: left;
+  flex: 1;
+}
+
+footer .col-c .language-options .language {
+  text-align: left;
+}
+
+footer .col-c .language-options .language a{
+  text-decoration: none;
+  color: var(--brand-beige);
+  font-weight: 700;
+
+}
+
+footer .col-c .language-options li:nth-child(1){
+  padding-right: 2rem;
+}
+
+footer .language-options .language + .language {
+  border-left: 2px solid var(--brand-beige);
+  padding-inline: 2rem;
+}
+
 /*================BACK-TO-TOP=================*/
 
 #backToTopButton {
@@ -500,6 +534,10 @@ footer .social-links {
 
   .col-b {
     grid-area: B;
+  }
+
+  .col-c {
+    grid-area: C;
   }
 
   section {
@@ -740,7 +778,9 @@ footer .social-links {
 
   footer .wrapper {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'A B';
+    grid-template-areas: 
+    'A B'
+    'C C';
   }
 
   footer .col-a {
@@ -755,4 +795,5 @@ footer .social-links {
   footer p {
     margin-bottom: 0;
   }
+  
 }

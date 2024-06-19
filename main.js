@@ -71,6 +71,21 @@ function closeMenu() {
   document.body.classList.remove('menu-expanded')
 }
 
+let acceptedLanguages = ['en', 'pt']
+
+const isNavigatorLanguageAccepted = acceptedLanguages.includes(navigator.language.split('-')[0]) 
+
+if(isNavigatorLanguageAccepted){
+  document.documentElement.setAttribute('lang', navigator.language);
+  var currentlanguage = document.documentElement.lang.split('-')[0]
+  changeLang(currentlanguage)
+}
+
+function changeLang(lang){
+  document.head.insertAdjacentHTML('beforeend', `<style>.bilanguage::before {content: attr(data-${lang});}</style>`)
+  currentLanguage = lang
+}
+
 /* ScrollReveal().reveal('') */
 
 ScrollReveal({
